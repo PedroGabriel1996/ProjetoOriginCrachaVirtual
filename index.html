@@ -66,24 +66,6 @@
             </ul>
     </div>
   </main>
-  <script>
- 
-const linksSocialMedia = {
-  github: "PedroGabriel1996",
-  youtube: "channel/UCHhglbzMzpP3F7dY1vh9j0g",
-  facebook: "profile.php?id=100032383353594",
-  instagram: "braganca.pg",
-  twitter: "pedro_g001",
-}
-
-function changeSocialMediaLinks() {
-  for(let li of socialLinks.children) {
-  const social = li.getAttribute('class')
-
-  li.children[0].href = `https://${social}.com/${linksSocialMedia[social]}`
-  }
-}
-changeSocialMediaLinks()
-  </script>
+  <script src="main.js"></script>
 </body>
 </html>
