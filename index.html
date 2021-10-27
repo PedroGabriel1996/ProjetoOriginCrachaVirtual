@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>NLW Heat</title>
+  <title>Crachá virtual</title>
   <link rel="stylesheet" href="style.css"/>
   <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -17,45 +17,73 @@
     <div class="container">
     <div class="avatar">
       <span>
-        <img src="images/logo.svg" alt="Selo Rockertseat">
+        <img src="images/logo.svg" alt="Selo Rocketseat">
       </span>
-      <img src="https://lorempixel.com/185/185/people" alt="Imagem Perfil">
+      <img src="images/fotocracha.jpeg" alt="Imagem Perfil">
     </div>
     <div class="container">
-      <h1>
+      <h1 id = "userName">
         Pedro Gabriel
       </h1>
-        <a href="https://github.com/PedroGabriel1996">
+        <a href="https://github.com/PedroGabriel1996"
+        target="_blank"
+        >
           <img src="images/github 2.svg" alt="Icone github"/>
           PedroGabriel1996</a>
           <p>
-            Pronto para codar o futuro
+            Pronto para codar o futuro.
             </p>
-
-            <ul>
-              <li>
-                <a href="https://www.youtube.com/channel/UCHhglbzMzpP3F7dY1vh9j0g">
-                <img src="images/you.png" alt="Icone Youtube" target="_blank" />
+            <ul id= "socialLinks">
+              <li class="youtube">
+                <a href="https://www.youtube.com/channel/UCHhglbzMzpP3F7dY1vh9j0g"
+                target="_blank"
+                >
+                <img src="images/you.png" alt="Icone Youtube" />
                 </a>
               </li>
-              <li>
-                <a href="https://www.instagram.com/braganca.pg/">
-                <img src="images/instagram.png" alt="Icone instagram" target="_blank" />
+              <li class="instagram">
+                <a href="https://www.instagram.com/braganca.pg/"
+                target="_blank"
+                >
+                <img src="images/instagram.png" alt="Icone instagram"  />
                 </a>
               </li>
-              <li>
-                <a href="https://www.facebook.com/profile.php?id=100032383353594">
-                <img src="images/face.png" alt="Icone facebook" target="_blank" />
+              <li class = "facebook">
+                <a href="https://www.facebook.com/profile.php?id=100032383353594"
+                target="_blank"
+                >
+                <img src="images/face.png" alt="Icone facebook" />
                 </a>
               </li>
-              <li>
-                <a href="https://twitter.com/pedro_g001">
-                <img src="images/tww.png" alt="Icone Twitter" target="_blank" />
+              <li class = "twitter">
+                <a href="https://twitter.com/pedro_g001"
+                target="_blank"
+                >
+                <img src="images/tww.png" alt="Icone Twitter" />
                 </a>
               </li>
 
             </ul>
     </div>
   </main>
+  <script>
+ 
+const linksSocialMedia = {
+  github: "PedroGabriel1996",
+  youtube: "channel/UCHhglbzMzpP3F7dY1vh9j0g",
+  facebook: "profile.php?id=100032383353594",
+  instagram: "braganca.pg",
+  twitter: "pedro_g001",
+}
+
+function changeSocialMediaLinks() {
+  for(let li of socialLinks.children) {
+  const social = li.getAttribute('class')
+
+  li.children[0].href = `https://${social}.com/${linksSocialMedia[social]}`
+  }
+}
+changeSocialMediaLinks()
+  </script>
 </body>
 </html>
